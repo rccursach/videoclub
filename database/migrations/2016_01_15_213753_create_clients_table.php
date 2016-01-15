@@ -10,12 +10,12 @@ class CreateClientsTable extends Migration
     {
         Schema::create('clients', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->25();
-            $table->string('surname')->25();
-            $table->string('run')->12();
+            $table->string('name',25);
+            $table->string('surname',25);
+            $table->string('run',12);
             $table->date('birth_date');
-            $table->string('phone')->12();
-            $table->string('address')->30();
+            $table->string('phone',12);
+            $table->string('address',30);
             // Constraints declaration
             $table->timestamps();
         });

@@ -1,0 +1,13 @@
+APP_ENV=local
+APP_DEBUG=true
+APP_KEY=a360713727dd0924d6b26a7062b64db8a5ad5822
+
+DB_CONNECTION=pgsql
+DB_HOST=ec2-54-197-224-155.compute-1.amazonaws.com
+DB_PORT=5432
+DB_DATABASE=ddndd8pg8ulqj7
+DB_USERNAME=lncsdbrvrwpwaa
+DB_PASSWORD=CChzOp4QYtVKZbewp5Oj3q7mDa
+
+CACHE_DRIVER=memcached
+QUEUE_DRIVER=sync

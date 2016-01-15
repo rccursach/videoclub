@@ -10,10 +10,10 @@ class CreateMoviesTable extends Migration
     {
         Schema::create('movies', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->25();
+            $table->string('name',25);
             $table->integer('year');
-            $table->integer,unsigned('genre_id');
-            $table->integer,unsigned('director_id');
+            $table->unsignedInteger('genre_id');
+            $table->unsignedInteger('director_id');
             $table->foreign('genre_id')
                 ->references('id')
                 ->on('genres');

@@ -12,8 +12,8 @@ class CreateRentsTable extends Migration
             $table->increments('id');
             $table->date('date_start');
             $table->date('date_end');
-            $table->integer,unsigned('movie_id');
-            $table->integer,unsigned('client_id');
+            $table->unsignedInteger('movie_id');
+            $table->unsignedInteger('client_id');
             $table->boolean('returned');
             $table->foreign('movie_id')
                 ->references('id')
