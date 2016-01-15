@@ -42,3 +42,21 @@ $app->get('genre/{id}', 'GenresController@get');
 $app->post('genre', 'GenresController@add');
 $app->put('genre/{id}', 'GenresController@put');
 $app->delete('genre/{id}', 'GenresController@remove');
+
+/**
+ * Routes for resource movie
+ */
+$app->get('movie', 'MoviesController@all');
+$app->get('movie/{id}', 'MoviesController@get');
+$app->post('movie', 'MoviesController@add');
+$app->put('movie/{id}', 'MoviesController@put');
+$app->delete('movie/{id}', 'MoviesController@remove');
+
+/**
+ * Routes for resource rent
+ */
+$app->get('rent', 'RentsController@all');
+$app->get('rent/{id}', 'RentsController@get');
+$app->post('rent', 'RentsController@add');
+$app->put('rent/{id}', 'RentsController@put');
+$app->delete('rent/{id}', 'RentsController@remove');
