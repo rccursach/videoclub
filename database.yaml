@@ -1,0 +1,85 @@
+Director:
+    fields:
+        name:
+            schema: string:25
+            rules: required
+            tags: fillable
+Client:
+    fields:
+        name:
+            schema: string:25
+            rules: required
+            tags: fillable
+        surname:
+            schema: string:25
+            rules: required
+            tags: fillable
+        run:
+            schema: string:12 unique
+            rules: required|min:11
+            tags: fillable
+        birth_date:
+            schema: date
+            rules: date required
+            tags: fillable
+        phone:
+            schema: string:12
+            rules: required
+            tags: fillable
+        address:
+            schema: string:30
+            rules: required
+            tags: fillable
+Genre:
+    fields:
+        name:
+            schema: string:20 unique
+            rules: required
+            tags: fillable
+        description:
+            schema: text nullable
+            tags: fillable
+Movie:
+    belongsTo: director
+    belongsTo: genre
+    fields:
+        name:
+            schema: string:25
+            rules: required
+            tags: fillable
+        year:
+            schema: integer
+            rules: required numeric
+            tags: fillable
+        genre_id:
+            schema: integer unsigned
+            rules: required numeric
+            tags: fillable key
+        director_id:
+            schema: integer unsigned
+            rules: required numeric
+            tags: fillable key
+Rent:
+    belongsTo: movie
+    belongsTo: movie
+    fields:
+        date_start:
+            schema: date
+            rules: date required
+            tags: fillable
+        date_end:
+            schema: date
+            rules: date required
+            tags: fillable
+        movie_id:
+            schema: integer unsigned
+            rules: required numeric
+            tags: fillable key
+        client_id:
+            schema: integer unsigned
+            rules: required numeric
+            tags: fillable key
+        returned:
+            schema: boolean
+            rules: required
+            tags: fillable
