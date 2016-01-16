@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b1fc3f2411e573563d372c6614927cef",
+    "hash": "be37803cf57e8b3a57ebc1f5542b793a",
     "content-hash": "ccba799bb06d05b565d45d2516048236",
     "packages": [
         {
@@ -1187,16 +1187,16 @@
         },
         {
             "name": "laravel/lumen-framework",
-            "version": "v5.2.2",
+            "version": "v5.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/lumen-framework.git",
-                "reference": "91e07dd69930ed45515d2776a18e05f911b986f3"
+                "reference": "e0f84bb83a7dea5063508e800c7cf4755cd54824"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/lumen-framework/zipball/91e07dd69930ed45515d2776a18e05f911b986f3",
-                "reference": "91e07dd69930ed45515d2776a18e05f911b986f3",
+                "url": "https://api.github.com/repos/laravel/lumen-framework/zipball/e0f84bb83a7dea5063508e800c7cf4755cd54824",
+                "reference": "e0f84bb83a7dea5063508e800c7cf4755cd54824",
                 "shasum": ""
             },
             "require": {
@@ -1266,7 +1266,7 @@
                 "laravel",
                 "lumen"
             ],
-            "time": "2016-01-08 13:32:58"
+            "time": "2016-01-14 19:52:28"
         },
         {
             "name": "monolog/monolog",
