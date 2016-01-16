@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Director extends Model {
 
-	protected $fillable = ["name"];
+	protected $fillable = ["name", "surname"];
 
 	protected $dates = [];
 

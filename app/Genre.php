@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Genre extends Model {
 
-	protected $fillable = ["description"];
+	protected $fillable = ["name", "description"];
 
 	protected $dates = [];
 
