@@ -17,5 +17,14 @@ class Rent extends Model {
 	];
 
 	// Relationships
+	public function movie()
+	{
+		return $this->belongsTo('App\Movie');
+	}
+
+	public function client()
+	{
+		return $this->belongsTo('App\Client');
+	}
 
 }

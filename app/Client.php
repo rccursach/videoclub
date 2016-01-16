@@ -18,5 +18,9 @@ class Client extends Model {
 	];
 
 	// Relationships
+	public function rents()
+	{
+		return $this->hasMany('App\Rent');
+	}
 
 }

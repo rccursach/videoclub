@@ -19,44 +19,44 @@ $app->get('/', function () use ($app) {
 /**
  * Routes for resource director
  */
-$app->get('director', 'DirectorsController@all');
-$app->get('director/{id}', 'DirectorsController@get');
-$app->post('director', 'DirectorsController@add');
-$app->put('director/{id}', 'DirectorsController@put');
-$app->delete('director/{id}', 'DirectorsController@remove');
+$app->get('api/v1/directors', 'DirectorsController@all');
+$app->get('api/v1/directors/{id}', 'DirectorsController@get');
+$app->post('api/v1/directors', 'DirectorsController@add');
+$app->put('api/v1/directors/{id}', 'DirectorsController@put');
+$app->delete('api/v1/directors/{id}', 'DirectorsController@remove');
 
 /**
  * Routes for resource client
  */
-$app->get('client', 'ClientsController@all');
-$app->get('client/{id}', 'ClientsController@get');
-$app->post('client', 'ClientsController@add');
-$app->put('client/{id}', 'ClientsController@put');
-$app->delete('client/{id}', 'ClientsController@remove');
+$app->get('api/v1/clients', 'ClientsController@all');
+$app->get('api/v1/clients/{id}', 'ClientsController@get');
+$app->post('api/v1/clients', 'ClientsController@add');
+$app->put('api/v1/clients/{id}', 'ClientsController@put');
+$app->delete('api/v1/clients/{id}', 'ClientsController@remove');
 
 /**
  * Routes for resource genre
  */
-$app->get('genre', 'GenresController@all');
-$app->get('genre/{id}', 'GenresController@get');
-$app->post('genre', 'GenresController@add');
-$app->put('genre/{id}', 'GenresController@put');
-$app->delete('genre/{id}', 'GenresController@remove');
+$app->get('api/v1/genres', 'GenresController@all');
+$app->get('api/v1/genres/{id}', 'GenresController@get');
+$app->post('api/v1/genres', 'GenresController@add');
+$app->put('api/v1/genres/{id}', 'GenresController@put');
+$app->delete('api/v1/genres/{id}', 'GenresController@remove');
 
 /**
  * Routes for resource movie
  */
-$app->get('movie', 'MoviesController@all');
-$app->get('movie/{id}', 'MoviesController@get');
-$app->post('movie', 'MoviesController@add');
-$app->put('movie/{id}', 'MoviesController@put');
-$app->delete('movie/{id}', 'MoviesController@remove');
+$app->get('api/v1/movies', 'MoviesController@all');
+$app->get('api/v1/movies/{id}', 'MoviesController@get');
+$app->post('api/v1/movies', 'MoviesController@add');
+$app->put('api/v1/movies/{id}', 'MoviesController@put');
+$app->delete('api/v1/movies/{id}', 'MoviesController@remove');
 
 /**
  * Routes for resource rent
  */
-$app->get('rent', 'RentsController@all');
-$app->get('rent/{id}', 'RentsController@get');
-$app->post('rent', 'RentsController@add');
-$app->put('rent/{id}', 'RentsController@put');
-$app->delete('rent/{id}', 'RentsController@remove');
+$app->get('api/v1/rents', 'RentsController@all');
+$app->get('api/v1/rents/{id}', 'RentsController@get');
+$app->post('api/v1/rents', 'RentsController@add');
+$app->put('api/v1/rents/{id}', 'RentsController@put');
+$app->delete('api/v1/rents/{id}', 'RentsController@remove');

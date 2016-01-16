@@ -13,5 +13,9 @@ class Director extends Model {
 	];
 
 	// Relationships
+	public function movies()
+	{
+		return $this->hasMany('App\Movie');
+	}
 
 }
