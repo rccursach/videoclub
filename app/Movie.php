@@ -10,9 +10,9 @@ class Movie extends Model {
 
 	public static $rules = [
 		"name" => "required",
-		"year" => "required,numeric",
-		"genre_id" => "required,numeric",
-		"director_id" => "required,numeric",
+		"year" => "required|numeric",
+		"genre_id" => "required|numeric",
+		"director_id" => "required|numeric",
 	];
 
 	public function director()

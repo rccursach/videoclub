@@ -9,7 +9,7 @@ class Genre extends Model {
 	protected $dates = [];
 
 	public static $rules = [
-		"name" => "unique",
+		"name" => "unique:genres,name",
 		"description" => "nullable",
 	];
 

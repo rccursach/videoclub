@@ -9,10 +9,10 @@ class Rent extends Model {
 	protected $dates = [];
 
 	public static $rules = [
-		"date_start" => "date,required",
-		"date_end" => "date,required",
-		"movie_id" => "required,numeric",
-		"client_id" => "required,numeric",
+		"date_start" => "date|required",
+		"date_end" => "date|required",
+		"movie_id" => "required|numeric",
+		"client_id" => "required|numeric",
 		"returned" => "required",
 	];
 

@@ -11,7 +11,7 @@ class Client extends Model {
 	public static $rules = [
 		"name" => "required",
 		"surname" => "required",
-		"run" => "unique",
+		"run" => "unique:clients,run",
 		"birth_date" => "required",
 		"phone" => "required",
 		"address" => "required",
