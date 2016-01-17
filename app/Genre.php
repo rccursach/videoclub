@@ -9,13 +9,12 @@ class Genre extends Model {
 	protected $dates = [];
 
 	public static $rules = [
-		"name" => "unique:genres,name"
 	];
 
 	// Relationships
 	public function movies()
 	{
-		return $this->hasMany('App\Movie');
+		return $this->hasMany('Movie');
 	}
 
 }

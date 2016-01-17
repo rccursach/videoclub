@@ -3,21 +3,23 @@
 <table class="table">
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Year</th>
-			<th>Genre Id</th>
-			<th>Director Id</th>
+			<th>Nombre</th>
+			<th>Director</th>
+			<th>Año</th>
+			<th>Género</th>
+			<th>Editar</th>
+			<th>Eliminar</th>
 		</tr>
 	</thead>
 	<tbody ng-scope>
 
 		<tr data-ng-repeat="movie in movies">
 			<td>{{movie.name}}</td>
+			<td>{{movie.director.name}} {{movie.director.surname}}</td>
 			<td>{{movie.year}}</td>
-			<td>{{movie.genre_id}}</td>
-			<td>{{movie.director_id}}</td>
-			<td><button type="button">Edit</button></td>
-			<td><button type="button">Delete</button></td>
+			<td>{{movie.genre.name}}</td>
+			<td><a class="btn btn-success" ng-href='{{"/movies/"+movie.id}}'>Editar</a></td>
+			<td><button class="btn btn-danger" ng-click="movieDelete(movie.id)">Eliminar</button></td>
 		</tr>
 
 	<!--

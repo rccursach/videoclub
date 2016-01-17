@@ -95,8 +95,8 @@ code {
 					<div class="panel-group" id="panel-636607">
 						<uib-accordion>
 						<!-- peliculas -->
-					    	<uib-accordion-group heading="Peliculas" is-open="true">
-								<a href="/movies" class="list-group-item active">Buscar</a>
+					    	<uib-accordion-group heading="Peliculas">
+								<a href="/movies" class="list-group-item">Buscar</a>
 								<a href="/movies/new" class="list-group-item">Nuevo</a>
 							</uib-accordion-group>
 						<!-- Directores -->
@@ -105,7 +105,7 @@ code {
 								<a href="/directors/new" class="list-group-item">Nuevo</a>
 							</uib-accordion-group>
 						<!-- Generos -->
-					    	<uib-accordion-group heading="Generos">
+					    	<uib-accordion-group heading="G&eacute;neros">
 								<a href="/genres" class="list-group-item">Buscar</a>
 								<a href="/genres/new" class="list-group-item">Nuevo</a>
 							</uib-accordion-group>
@@ -154,5 +154,25 @@ code {
 <script type="text/javascript" src="components/app/controllers/controller.js"></script>
 <script type="text/javascript" src="components/app/routes/route.js"></script>
 <script type="text/javascript" src="components/app/services/service.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// Swap active status on sidebar menu
+		$(".list-group-item").click(function(){
+			var active = $(".list-group-item.active")[0];
+			$(active).removeClass("active");
+			$(this).addClass("active");
+		});
+	});
+
+	function highlightSearch(){
+		var list = $(".panel-open .list-group-item");
+		if(list.length > 0){
+			for (var i = list.length - 1; i >= 0; i--) {
+				$(list[i]).removeClass("active");
+			};
+			$(list[0]).addClass("active");
+		}
+	}
+</script>
 </body>
 </html>

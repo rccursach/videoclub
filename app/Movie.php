@@ -17,12 +17,12 @@ class Movie extends Model {
 
 	public function director()
 	{
-		return $this->belongsTo("App\Director");
+		return $this->belongsTo("Director", "director_id", "id");
 	}
 
 	public function genre()
 	{
-		return $this->belongsTo("App\Genre");
+		return $this->belongsTo("Genre", "genre_id", "id");
 	}
 
 

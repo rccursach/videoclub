@@ -20,7 +20,7 @@ videoclubApp.config(['$routeProvider', '$locationProvider',
 			templateUrl : 'partials/directors/new',
 			controller : 'directorsCtrl'
 		}).
-		when('/directors/:directorId', {
+		when('/directors/:director_id', {
 			templateUrl : 'partials/directors/edit',
 			controller : 'directorsCtrl'
 		}).
@@ -32,7 +32,7 @@ videoclubApp.config(['$routeProvider', '$locationProvider',
 			templateUrl : 'partials/genres/new',
 			controller : 'genresCtrl'
 		}).
-		when('/genres/:genreId', {
+		when('/genres/:genre_id', {
 			templateUrl : 'partials/genres/edit',
 			controller : 'genresCtrl'
 		}).
@@ -44,7 +44,7 @@ videoclubApp.config(['$routeProvider', '$locationProvider',
 			templateUrl : 'partials/clients/new',
 			controller : 'clientsCtrl'
 		}).
-		when('/clients/:clientId', {
+		when('/clients/:client_id', {
 			templateUrl : 'partials/clients/edit',
 			controller : 'clientsCtrl'
 		}).
@@ -56,7 +56,7 @@ videoclubApp.config(['$routeProvider', '$locationProvider',
 			templateUrl : 'partials/movies/new',
 			controller : 'moviesCtrl'
 		}).
-		when('/movies/:moviesId', {
+		when('/movies/:movie_id', {
 			templateUrl : 'partials/movies/edit',
 			controller : 'moviesCtrl'
 		}).
@@ -68,12 +68,12 @@ videoclubApp.config(['$routeProvider', '$locationProvider',
 			templateUrl : 'partials/rents/new',
 			controller : 'rentsCtrl'
 		}).
-		when('/rents/:rentId', {
+		when('/rents/:rent_id', {
 			templateUrl : 'partials/rents/edit',
 			controller : 'rentsCtrl'
 		}).
 		otherwise({
-			//redirectTo : '/movies'
+			redirectTo : '/'
 		});
 		$locationProvider.html5Mode(true);
 	}
