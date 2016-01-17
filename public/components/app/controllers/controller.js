@@ -21,7 +21,7 @@ va.controller('genresCtrl', ['$scope', '$http', '$location', '$routeParams', '$r
 		};
 
 		$scope.genreSave = function() {
-
+			console.log($scope.genre);
 			$http.post('/api/v1/genres', $scope.genre).
 			then(
 				function successCallback(response){
