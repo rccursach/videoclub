@@ -1,90 +1,43 @@
+<div ng-controller='directorsCtrl' data-ng-init="getDirectors()">
+
 <table class="table">
 	<thead>
 		<tr>
 			<th>
-				#
+				id
 			</th>
 			<th>
-				Product
+				Nombre
 			</th>
 			<th>
-				Payment Taken
+				Apellido
 			</th>
 			<th>
-				Status
+				Editar
+			</th>
+			<th>
+				Eliminar
 			</th>
 		</tr>
 	</thead>
-	<tbody>
-		<tr>
+	<tbody ng-scope>
+		<tr data-ng-repeat="director in directors">
 			<td>
-				1
+				{{director.id}}
 			</td>
 			<td>
-				TB - Monthly
+				{{director.name}}
 			</td>
 			<td>
-				01/04/2012
+				{{director.surname}}
 			</td>
 			<td>
-				Default
-			</td>
-		</tr>
-		<tr class="active">
-			<td>
-				1
+				<button class="btn btn-alert">Editar</button>
 			</td>
 			<td>
-				TB - Monthly
-			</td>
-			<td>
-				01/04/2012
-			</td>
-			<td>
-				Approved
-			</td>
-		</tr>
-		<tr class="success">
-			<td>
-				2
-			</td>
-			<td>
-				TB - Monthly
-			</td>
-			<td>
-				02/04/2012
-			</td>
-			<td>
-				Declined
-			</td>
-		</tr>
-		<tr class="warning">
-			<td>
-				3
-			</td>
-			<td>
-				TB - Monthly
-			</td>
-			<td>
-				03/04/2012
-			</td>
-			<td>
-				Pending
-			</td>
-		</tr>
-		<tr class="danger">
-			<td>
-				4
-			</td>
-			<td>
-				TB - Monthly
-			</td>
-			<td>
-				04/04/2012
-			</td>
-			<td>
-				Call in to confirm
+				<button class="btn btn-danger">Eliminar</button>
 			</td>
 		</tr>
 	</tbody>
 </table>
+</div>

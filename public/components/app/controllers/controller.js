@@ -2,27 +2,64 @@ va = angular.module('videoclubApp.controllers', []);
 
 va.controller('directorsCtrl', ['$scope', '$http', '$location', '$routeParams',
 	function($scope, $http, $location, $routeParams){
-		alert('hola director');
+		
+		$scope.getDirectors = function(){
+			$http.get('/api/v1/directors').success(function(response){
+				$scope.directors = response;
+			});
+		}
 	}
 ]);
 
-va.controller('genresCtrl', ['$scope', '$http', '$location', '$routeParams',
-	function($scope, $http, $location, $routeParams){
-		alert('hola genero');
+va.controller('genresCtrl', ['$scope', '$http', '$location', '$routeParams', '$resource',
+	function($scope, $http, $location, $routeParams, $resource){
+		
+		$scope.getGenres = function(){
+			$http.get('/api/v1/genres').success(function(response){
+				$scope.genres = response;
+			});
+		};
+
+		$scope.genreSave = function() {
+
+			$http.post('/api/v1/genres', $scope.genre).
+			then(
+				function successCallback(response){
+					alert(response.message);
+				},
+				function errorCallback(response){
+					alert(response.message);
+				});
+		};
 	}
 ]);
 va.controller('moviesCtrl', ['$scope', '$http', '$location', '$routeParams',
 	function($scope, $http, $location, $routeParams){
-		alert('hola pelicula');
+
+		$scope.getMovies = function(){
+			$http.get('/api/v1/movies').success(function(response){
+				$scope.movies = response;
+			});
+		}
 	}
 ]);
 va.controller('clientsCtrl', ['$scope', '$http', '$location', '$routeParams',
 	function($scope, $http, $location, $routeParams){
-		alert('hola cliente');
+
+		$scope.getClients = function(){
+			$http.get('/api/v1/clients').success(function(response){
+				$scope.cients = response;
+			});
+		}
 	}
 ]);
 va.controller('rentsCtrl', ['$scope', '$http', '$location', '$routeParams',
 	function($scope, $http, $location, $routeParams){
-		alert('hola arriendo');
+		
+		$scope.getRents = function(){
+			$http.get('/api/v1/rents').success(function(response){
+				$scope.rents = response;
+			});
+		}
 	}
 ]);
