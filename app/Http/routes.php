@@ -16,6 +16,10 @@ $app->get('/', function () use ($app) {
     return view('base');
 });
 
+$app->get('/partials/{resource}/{action}', function ($resource, $action) {
+    return view("/partials/$resource/$action");
+});
+
 /**
  * Routes for resource director
  */
